@@ -2,7 +2,7 @@
 
 int main()
 {
-
+ // Zadanie 1 ===================================================================
     int nomber1, nomber2, uslovie;
     std::cout << "Enter two nombers: " << std::endl;
     std::cin >> nomber1;
@@ -12,9 +12,10 @@ int main()
         std::cout << "true" << std::endl;
     else
         std::cout << "false" << std::endl;
-    
+ // Zadanie 1 ===================================================================
 
 
+ // Zadanie 2 ===================================================================
     const int NOMBER3 = 3;
     const int NOMBER4 = 6;
     if (NOMBER3 == 10 || NOMBER4 == 10 || (NOMBER3 + NOMBER4) == 10)
@@ -25,9 +26,10 @@ int main()
     {
         std::cout << "false" << std::endl;
     }
+ // Zadanie 2 ===================================================================
 
 
-
+ // Zadanie 3 ===================================================================
     for (int n = 1; n <= 50; n++)
     {
         if ((n % 2) == 1)
@@ -36,9 +38,10 @@ int main()
         }
     }
     std::cout << std::endl;
+ // Zadanie 3 ===================================================================
 
 
-
+ // Zadanie 4 ===================================================================
     int check;
     std::cout << "Enter int nomber from 0 to 100: ";
     std::cin >> check;
@@ -54,7 +57,7 @@ int main()
                 std::cout << "Not natural simple" << std::endl;
             }
             j++;
-            //std::cout << k;
+            //std::cout << k; === тут я провтыкал с условиями на do -- while и у меня получался бесконечный цикл. делал вывод для проверки этого момента
         } while ((j < check) && (k != 1));
         if (j == check)
         {
@@ -65,8 +68,9 @@ int main()
     {
         std::cout << "Not natural simple" << std::endl;
     }
+ // Zadanie 4 ===================================================================
 
-
+ // Zadanie 5 ===================================================================
     int year;
     std::cout << "Enter year from 1 to 3000: ";
     std::cin >> year;
@@ -74,6 +78,7 @@ int main()
         std::cout << year << " is a leap year" << std::endl;
     else
         std::cout << year << " is'nt a leap year" << std::endl;
+ // Zadanie 5 ===================================================================
 
 
     return 0;
