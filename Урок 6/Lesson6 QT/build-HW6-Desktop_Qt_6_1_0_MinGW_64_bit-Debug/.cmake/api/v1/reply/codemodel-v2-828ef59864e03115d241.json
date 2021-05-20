@@ -1,0 +1,77 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.14"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "HW6",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "HW6::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-HW6-Debug-5bdd199d4675d0412141.json",
+					"name" : "HW6",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "HW6_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-HW6_autogen-Debug-5bacdd7fd509ac382c4d.json",
+					"name" : "HW6_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "HW6_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-HW6_autogen_timestamp_deps-Debug-4385cac3880ddac347f3.json",
+					"name" : "HW6_autogen_timestamp_deps",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Users/v2an/Desktop/GB/GeekBrains/Git/Урок 6/Lesson6 QT/build-HW6-Desktop_Qt_6_1_0_MinGW_64_bit-Debug",
+		"source" : "C:/Users/v2an/Desktop/GB/GeekBrains/Git/Урок 6/Lesson6 QT/HW6"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 2
+	}
+}

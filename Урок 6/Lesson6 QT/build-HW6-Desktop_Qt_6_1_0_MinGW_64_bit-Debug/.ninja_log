@@ -1,0 +1,16 @@
+# ninja log v5
+1	339	6432051577178318	HW6_autogen/timestamp	4f8f53a00ce8b89f
+340	486	6432051578658328	CMakeFiles/HW6.dir/HW6_autogen/mocs_compilation.cpp.obj	33da07c3b97929d3
+344	2161	6432051595398316	CMakeFiles/HW6.dir/main.cpp.obj	8a0e4f3a0869cd2f
+2163	2450	6432051598258319	HW6.exe	a09ec695c3c4acd9
+11	193	6432052359350224	HW6_autogen/timestamp	4f8f53a00ce8b89f
+193	274	6432052360160244	CMakeFiles/HW6.dir/HW6_autogen/mocs_compilation.cpp.obj	33da07c3b97929d3
+206	1945	6432052376880216	CMakeFiles/HW6.dir/main.cpp.obj	8a0e4f3a0869cd2f
+1945	2152	6432052378930209	HW6.exe	a09ec695c3c4acd9
+11	219	6432053093088285	HW6_autogen/timestamp	4f8f53a00ce8b89f
+220	389	6432053094788270	CMakeFiles/HW6.dir/HW6_autogen/mocs_compilation.cpp.obj	33da07c3b97929d3
+224	2003	6432053110948262	CMakeFiles/HW6.dir/main.cpp.obj	8a0e4f3a0869cd2f
+2003	2375	6432053114618281	HW6.exe	a09ec695c3c4acd9
+12	110	6432053219713252	HW6_autogen/timestamp	4f8f53a00ce8b89f
+111	192	6432053220553240	CMakeFiles/HW6.dir/HW6_autogen/mocs_compilation.cpp.obj	33da07c3b97929d3
+192	386	6432053222453235	HW6.exe	a09ec695c3c4acd9
