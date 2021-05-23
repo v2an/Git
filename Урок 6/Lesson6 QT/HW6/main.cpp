@@ -1,10 +1,9 @@
-#include <QCoreApplication>
 #include <iostream>
 
 int main()
 {
-    std::cout << "Some random shit!" << std::endl;
     int a;
+    std::cout << "Some random input: " << std::endl;
     std::cin >> a;
     std::cout << a;
     return 0;
