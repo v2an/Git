@@ -55,7 +55,7 @@ void printField(Field & iF)
     cout << endl;
     for (size_t y = 0; y < iF.FIELDSIZE; y++)
     {
-        std::cout << y << " | ";
+        std::cout << ( y + 1 ) << " | ";
         for (size_t x = 0; x < iF.FIELDSIZE; x++)
         {
             std::cout << (char)iF.inField[y][x] << " | ";
