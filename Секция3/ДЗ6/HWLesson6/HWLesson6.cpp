@@ -58,20 +58,6 @@ void Excers1(int** InArray, int m, int n)
     }
 }
 
-int** ArrayInit(int rows, int cols)
-{
-    int** m = new int* [rows];
-    for (int i = 0; i < rows; ++i)
-    {
-        m[i] = new int[cols];
-        for (int j = 0; j < cols; ++j)
-        {
-            std::cout << "Enter " << i + 1 << " ," << j + 1 << " element of array: ";
-            std::cin >> m[i][j];
-        }
-    }
-    return m;
-}
 
 //=======================================================================================================
 
