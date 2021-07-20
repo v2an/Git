@@ -181,6 +181,7 @@ void BuckerSort(int* ArrExrs2, int len)
 
 int main()
 {
+    std::cout << "Exrsz 1" << std::endl;
     const int SIZE1 = 30;
     int ArrExrs1[30];
     srand(time(0));
@@ -196,6 +197,7 @@ int main()
 
     
     //=============================
+    std::cout << "Exrsz 2" << std::endl;
 	const int SIZE = 30;
 	int* ArrExrs2 = ArrayX1InitR(SIZE);
     PrintX1Array(ArrExrs2, SIZE);
