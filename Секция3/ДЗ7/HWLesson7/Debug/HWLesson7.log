@@ -1,0 +1,5 @@
+﻿  HWLesson7.cpp
+C:\Users\v2an\Desktop\GB\GeekBrains\Git\Секция3\ДЗ7\HWLesson7\HWLesson7.cpp(119,15): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+C:\Users\v2an\Desktop\GB\GeekBrains\Git\Секция3\ДЗ7\HWLesson7\HWLesson7.cpp(222,15): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+C:\Users\v2an\Desktop\GB\GeekBrains\Git\Секция3\ДЗ7\HWLesson7\HWLesson7.cpp(42): warning C4715: median: значение возвращается не при всех путях выполнения
+  HWLesson7.vcxproj -> C:\Users\v2an\Desktop\GB\GeekBrains\Git\Секция3\ДЗ7\HWLesson7\Debug\HWLesson7.exe
