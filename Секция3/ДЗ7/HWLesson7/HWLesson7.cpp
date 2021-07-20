@@ -74,7 +74,7 @@ void AmpQuickSort1(int* ArrayQ, int first, int last)
 
 void AmpQuickSort1(int* ArrayQ, int first, int last)
 {
-    if ((last - first) > 10)
+    if ((last - first + 1) > 10)
     {
         int i = first;
         int j = last;
