@@ -12,7 +12,7 @@ void Swap(int* a, int* b)
 void InsertSort(int* ArrayQ, int first, int last)
 {
     int temp, pos;
-    int len = last - first;
+    int len = last - first + 1;
     for (int i = 1; i < len; i++)
     {
         temp = ArrayQ[i];
@@ -32,7 +32,7 @@ int median(int* arr, int first, int last)
     int las = arr[last];
     int Q = (first + last) / 2;
     int mid = arr[Q];
-    std::cout << fir << " [" << first << "] " << mid << " [" << Q << "] " << las << " [" << last << "] " << std::endl;
+    //std::cout << fir << " [" << first << "] " << mid << " [" << Q << "] " << las << " [" << last << "] " << std::endl;
     if ((fir < mid && mid < las) || (fir > mid && mid > las))
         return Q;
     if ((fir > mid && fir < las) || (fir < mid && fir > las))
@@ -74,14 +74,14 @@ void AmpQuickSort1(int* ArrayQ, int first, int last)
 
 void AmpQuickSort1(int* ArrayQ, int first, int last)
 {
-    if (last - first > 10)
+    if ((last - first) > 10)
     {
         int i = first;
         int j = last;
         int Q = (first + last) / 2;
-        int med = median(ArrayQ, first, last);
-        std::cout << med << std::endl;
-        Swap(&ArrayQ[med], &ArrayQ[Q]);
+        //int med = median(ArrayQ, first, last);
+        //std::cout << med << std::endl;
+        //Swap(&ArrayQ[med], &ArrayQ[Q]);
         int x = ArrayQ[(first + last) / 2];
         do
         {
@@ -107,9 +107,7 @@ void AmpQuickSort1(int* ArrayQ, int first, int last)
     else
     {
         InsertSort(ArrayQ, first, last);
-        return;
     }
-
 }
 
 //===============================================================================
@@ -134,40 +132,6 @@ void PrintX1Array(int* ArrayTPK, int len)
     std::cout << " |" << std::endl << std::endl;
 }
 
-/*
-void BuckerSort(int* ArrExrs2, int len)
-{
-    const int maxBucket = len;
-    const int ArrDeep = 31;
-    const int b = 10;
-    int buckets[b][ArrDeep];
-    for (int i = 0; i < b; i++)
-    {
-        buckets[i][maxBucket] = 0;
-    }
-
-    for (int digit = 1; digit < 1000; digit = digit * 10)
-    {
-        for (int i = 0; i < maxBucket; i++)
-        {
-            int d = (ArrExrs2[i] / digit) % b;
-            int counter = buckets[d][maxBucket];
-            buckets[d][counter] = ArrExrs2[i];
-            counter++;
-            buckets[d][maxBucket] = counter;
-        }
-        int idx = 0;
-        for (int i = 0; i < b; i++)
-        {
-            for (int j = 0; j < buckets[i][maxBucket]; j++)
-            {
-                ArrExrs2[idx++] = buckets[i][j];
-            }
-            buckets[i][maxBucket] = 0;
-        }
-    }
-}
-*/
 
 void BuckerSort(int* ArrExrs2, int len)
 {
@@ -230,11 +194,12 @@ int main()
     PrintX1Array(ArrExrs1, SIZE1);
 
 
-    /*
+    
     //=============================
 	const int SIZE = 30;
 	int* ArrExrs2 = ArrayX1InitR(SIZE);
     PrintX1Array(ArrExrs2, SIZE);
     BuckerSort(ArrExrs2, SIZE);
-    PrintX1Array(ArrExrs2, SIZE);*/
+    PrintX1Array(ArrExrs2, SIZE);
+    
 }
