@@ -33,11 +33,11 @@ int median(int* arr, int first, int last)
     int Q = (first + last) / 2;
     int mid = arr[Q];
     std::cout << fir << " [" << first << "] " << mid << " [" << Q << "] " << las << " [" << last << "] " << std::endl;
-    if ((mid > fir && mid < las) || (mid < fir && mid > las))
+    if ((mid > fir && mid <= las) || (mid <= fir && mid > las))
         return Q;
-    if ((fir > mid && fir < las) || (fir < mid && fir > las))
+    if ((fir > mid && fir <= las) || (fir <= mid && fir > las))
         return first;
-    if ((las > mid && las < fir) || (las < mid && las > fir))
+    if ((las > mid && las <= fir) || (las <= mid && las > fir))
         return last;
 }
 
@@ -81,7 +81,7 @@ void AmpQuickSort1(int* ArrayQ, int first, int last)
         int Q = (first + last) / 2;
         int med = median(ArrayQ, first, last);
         std::cout << med << std::endl;
-        Swap(&ArrayQ[med], &ArrayQ[Q]);
+        Swap(&ArrayQ[med], &ArrayQ[(first + last) / 2]);
         int x = ArrayQ[(first + last) / 2];
         do
         {
