@@ -1,0 +1,6 @@
+﻿  HW12.cpp
+C:\Users\v2an\Desktop\GB\GeekBrains\Git\Секция3\ДЗ 12\HW12\HW12.cpp(24,9): warning C4101: x: неиспользованная локальная переменная
+C:\Users\v2an\Desktop\GB\GeekBrains\Git\Секция3\ДЗ 12\HW12\HW12.cpp(185,15): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+C:\Users\v2an\Desktop\GB\GeekBrains\Git\Секция3\ДЗ 12\HW12\HW12.cpp(230,15): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+C:\Users\v2an\Desktop\GB\GeekBrains\Git\Секция3\ДЗ 12\HW12\HW12.cpp(109): warning C4715: checkBalance: значение возвращается не при всех путях выполнения
+  HW12.vcxproj -> C:\Users\v2an\Desktop\GB\GeekBrains\Git\Секция3\ДЗ 12\HW12\Debug\HW12.exe
