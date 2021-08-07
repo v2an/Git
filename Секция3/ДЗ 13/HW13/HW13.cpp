@@ -76,7 +76,6 @@ void depthTraversStack(Stack* st, int start)
             {
                 pushST(st, i);
                 visited[i] = 1;
-                //cout << st->head << endl;
                 cout << i << " ";
                 check = 1;
                 break;
@@ -87,7 +86,6 @@ void depthTraversStack(Stack* st, int start)
         {
             popST(st);
         }
-        //cout << st->size << endl;
     }
 }
 
@@ -177,17 +175,11 @@ int main()
     Stack* stack1 = new Stack;
     init(stack1);
     depthTraversStack(stack1, 2);
-    /*
-    for (int i = 0; i < n; i++)
-    {
-        if (visited[i] == 1)
-            cout << i << " ";
-    }
-    */
+
+
     cout << endl;
     // ============================================================== EXRS 2 ================================
     cout << endl << "================================ EXRS 2 ================================" << endl << endl;
-
     int st = 1;
     CountCheckMatrix();
     PrintHead();
@@ -198,6 +190,4 @@ int main()
     resetArr();
     cout << "Recursive output" <<endl;
     PrintRecurseve();
-
-
 }
