@@ -1,6 +1,6 @@
 ﻿#include <iostream>
 using namespace std;
-
+// ================================================================== EXRS 1 ==================================================================
 struct StackNode
 {
     int dat;
@@ -91,7 +91,7 @@ void depthTraversStack(Stack* st, int start)
     }
 }
 
-// ================================================================== EXRS 2 ================================
+// ================================================================== EXRS 2 ==================================================================
 const int n2 = 6;
 
 int matrix2[n2][n2] = {
@@ -146,6 +146,30 @@ void CountCheckRecurse(int st)
     } 
 }
 
+void PrintHead()
+{
+    for (int i = 0; i < n2; i++)
+    {
+        cout << (i + 1) << " | ";
+    }
+}
+
+void PrintMatrix()
+{
+    for (int i = 0; i < n2; i++)
+    {
+        cout << visitedMatrix[i] << " | ";
+    }
+}
+
+void PrintRecurseve()
+{
+    for (int i = 0; i < n2; i++)
+    {
+        cout << visitedRecurseCount[i] << " | ";
+    }
+}
+
 int main()
 {
     // ============================================================== EXRS 1 ================================
@@ -163,25 +187,17 @@ int main()
     cout << endl;
     // ============================================================== EXRS 2 ================================
     cout << endl << "================================ EXRS 2 ================================" << endl << endl;
+
     int st = 1;
     CountCheckMatrix();
-    for (int i = 0; i < n2; i++)
-    {
-        cout << (i+1) << " | ";
-    }
+    PrintHead();
     cout << endl << "Matrix output" << endl;
-    for (int i = 0; i < n2; i++)
-    {
-        cout << visitedMatrix[i] << " | ";
-    }
+    PrintMatrix();
     cout << endl;
     CountCheckRecurse(st);
     resetArr();
-    cout << "Recurse output" <<endl;
-    for (int i = 0; i < n2; i++)
-    {
-        cout << visitedRecurseCount[i] << " | ";
-    }
+    cout << "Recursive output" <<endl;
+    PrintRecurseve();
 
 
 }
