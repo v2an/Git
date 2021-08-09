@@ -177,7 +177,7 @@ int main()
     int keyCez;
     cout << "Enter your message: ";
     string inputCez;
-    getline(cin, inputCez);  // one imput to both exersizes!
+    getline(cin, inputCez);  // one input to both exersizes!
     cout << "Enter key: ";
     cin >> keyCez;
     string CezCript = CezarCript(inputCez, keyCez);
