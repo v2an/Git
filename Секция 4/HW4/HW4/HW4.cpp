@@ -216,7 +216,7 @@ public:
 	}
 };
 
-class Hand : public Card
+class Hand
 {
 private:
 	std::vector<Card*> mHand;
