@@ -1,0 +1,4 @@
+﻿  HW2.cpp
+C:\Users\v2an\Desktop\GB\GeekBrains\Git\Секция 6\HW2\HW2\HW2.cpp(57,20): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\v2an\Desktop\GB\GeekBrains\Git\Секция 6\HW2\HW2\HW2.cpp(153): message : выполняется компиляция ссылки на экземпляр шаблон функции "void vecPrint<int>(std::vector<int *,std::allocator<int *>> &)"
+  HW2.vcxproj -> C:\Users\v2an\Desktop\GB\GeekBrains\Git\Секция 6\HW2\HW2\Debug\HW2.exe
