@@ -6,6 +6,7 @@
 #include <sstream>
 #include <istream>
 #include <set>
+#include <unordered_set>
 
 // ======================= EXRSZ 2 =======================
 class textSentenses
@@ -29,25 +30,15 @@ public:
 template<typename InIt>
 void PrintUnique(InIt begin, InIt end)
 {
-    InIt p1 = begin;
-    while (p1 != end)
+    std::unordered_set<std::string> output1;
+    for (auto iter = begin; iter != end; ++iter )
     {
-        InIt p2 = begin;
-        while (p2 != p1)
-        {
-            if (*p1 == *p2)
-            {
-                break;
-            }
-            ++p2;
-        }
-        if (p1 == p2)
-        {
-            std::cout << *p1 << ' ';
-        }
-        ++p1;
+        output1.insert(*iter);
     }
-    std::cout << std::endl;
+    for (auto out : output1)
+    {
+        std::cout << out << " ";
+    }
 }
 
 int main()
@@ -67,12 +58,12 @@ int main()
     PrintUnique(vs1.begin(), vs1.end());
     std::cout << std::endl;
     
-    std::cout << "----------------------------------------" << std::endl << "Enter some nombers: ";
+    std::cout << "----------------------------------------" << std::endl << "Enter string 2: ";
     s = " ";
     std::getline(std::cin, s);
-    std::vector<int> v1;
+    std::vector<std::string> v1;
     std::stringstream Input2(s);
-    int i;
+    std::string i;
     while (Input2 >> i)
     {
         v1.push_back(i);
@@ -80,8 +71,8 @@ int main()
     PrintUnique(v1.begin(), v1.end());
     std::cout << std::endl;
 
-    std::cout << "----------------------------------------" << std::endl << "Enter some nombers again: ";
-    std::list<int> L1;
+    std::cout << "----------------------------------------" << std::endl << "Enter string 3: ";
+    std::list<std::string> L1;
     s = " ";
     std::getline(std::cin, s);
     std::stringstream Input3(s);
@@ -95,7 +86,7 @@ int main()
 
     // ======================= EXRSZ 2 =======================
     std::cout << "Enter some sentenses: " << std::endl;
-    std::set<textSentenses> Exrsz2MainData;
+    std::multiset<textSentenses> Exrsz2MainData;
     char InpChar;
     std::string TmpStr;
     while (std::cin.get(InpChar))   // Почему-то, чтобы выйти из цикла, требуется дополнительно ввести ещё 1 символ новой строки.
