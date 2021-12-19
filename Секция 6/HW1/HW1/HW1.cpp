@@ -171,7 +171,7 @@ public:
 
 int main()
 {
-    std::ifstream file ("C:\\Users\\v2an\\Desktop\\GB\\GeekBrains\\Git\\Секция 6\\HW1\\HW1\\Debug\\Base.txt");
+    std::ifstream file ("C:\\Users\\v2an\\Desktop\\GB\\GeekBrains\\Git\\Section6\\HW1\\HW1\\Debug\\Base.txt");
     if (!file)
     {
         std::cout << "File dont open\n\n";

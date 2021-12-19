@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+message FullName {
+	string Name = 1;
+	string Surename = 2;
+	string Fathername = 3;
+}
+
+message Student {
+	FullName NameOfStudent = 1;
+	repeated int32 Grades = 2;
+	double AvrgGrades = 3;
+}
+
+message StudentGroup {
+	repeated Student StudentGrp = 1;
+}
