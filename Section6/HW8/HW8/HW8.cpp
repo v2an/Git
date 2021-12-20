@@ -4,7 +4,6 @@
 #include <vector>
 #include <algorithm>
 #include <optional>
-//#include <gtest/gtest.h>  - added, but dont used it, thx to link errors
 
 struct Person
 {
@@ -35,15 +34,6 @@ bool operator == (const Nomber& p1, const Nomber& p2)
 {
     return std::tie(p1.country, p1.region, p1.nomber, p1.adjust) == std::tie(p2.country, p2.region, p2.nomber, p2.adjust);
 }
-/*
-bool operator==(std::pair<Person, Nomber> p1, std::pair<Person, Nomber> p2)
-{
-    if (p1.first == p2.first && p1.second == p2.second)
-        return 1;
-    else
-        return 0;
-}
-*/
 
 std::ostream& operator << (std::ostream& os, const Nomber& n1)
 {
@@ -201,7 +191,6 @@ void AddTest()
 {
     PhoneBook TestBook;
     TestBook.AddNomber(std::pair(Person{ "Petrov", "Petr", "Petrovich" }, Nomber{ 7, 495, 9155448, 13 }));
-    //TestBook.PrintBook();
     if (TestBook.Phone[0] == std::pair(Person{ "Petrov", "Petr", "Petrovich" }, Nomber{ 7, 495, 9155448, 13 }))
         std::cout << "Adding test OK" << std::endl;
     else
@@ -220,7 +209,6 @@ void SortByPhoneTest()
     TestBook.AddNomber(std::pair(Person{ "Obramov", "Petr", "Petrovich" }, Nomber{ 7, 497, 9155448, 13 }));
     TestBook.AddNomber(std::pair(Person{ "Kozhukhov", "Petr", "Petrovich" }, Nomber{ 7, 498, 9155448, 13 }));
     TestBook.SortByPhone();
-    //TestBook.PrintBook();
     if (TestBook.Phone[7] == std::pair(Person{ "Andropov", "Petr", "Petrovich" }, Nomber{ 7, 999, 9155448, 13 }))
         std::cout << "Sort by nomber test OK" << std::endl;
     else
@@ -239,7 +227,6 @@ void SortByNameTest()
     TestBook.AddNomber(std::pair(Person{ "Obramov", "Petr", "Petrovich" }, Nomber{ 7, 497, 9155448, 13 }));
     TestBook.AddNomber(std::pair(Person{ "Kozhukhov", "Petr", "Petrovich" }, Nomber{ 7, 498, 9155448, 13 }));
     TestBook.SortByName();
-    //TestBook.PrintBook();
     if (TestBook.Phone[7] == std::pair(Person{ "Vaanov", "Petr", "Petrovich" }, Nomber{ 7, 494, 9155448, 13 }))
         std::cout << "Sort by name test OK" << std::endl;
     else
@@ -259,7 +246,6 @@ void GetPhoneNumberTest()
     TestBook.AddNomber(std::pair(Person{ "Kozhukhov", "Petr", "Petrovich" }, Nomber{ 7, 498, 9155448, 13 }));
 
     std::tuple<std::string, Nomber> Take = TestBook.GetPhoneNumber("Sheftelevich");
-    //TestBook.PrintBook();
     if (Take == std::tuple<std::string, Nomber>("", Nomber{ 6, 495, 9155448, 13 }))
         std::cout << "Get Phone Number test 1/3 OK" << std::endl;
     else
@@ -289,7 +275,6 @@ void ChangePhoneNumberTest()
     TestBook.AddNomber(std::pair(Person{ "Sheftelevich", "Petr", "Petrovich" }, Nomber{ 6, 495, 9155448, 13 }));
     TestBook.AddNomber(std::pair(Person{ "Obramov", "Petr", "Petrovich" }, Nomber{ 7, 497, 9155448, 13 }));
     TestBook.AddNomber(std::pair(Person{ "Kozhukhov", "Petr", "Petrovich" }, Nomber{ 7, 498, 9155448, 13 }));
-    //TestBook.PrintBook();
 
     TestBook.ChangePhoneNumber(Person{ "Susanin", "Petr", "Petrovich" }, Nomber{ 7, 999, 9155448, 13 });
     if (TestBook.Phone[3] == std::pair(Person{ "Susanin", "Petr", "Petrovich" }, Nomber{ 7, 999, 9155448, 13 }))
@@ -317,8 +302,8 @@ int main()
     ChangePhoneNumberTest(); // =========================TESTING CORNER==================================================
     std::cout << "==============================================END OF TEST==============================================" << std::endl << std::endl;
     // ==================================================TESTING CORNER==================================================
-    // Next main programm ------>
     
+    // Next main programm ------>
     std::ifstream file("C:\\Users\\v2an\\Desktop\\GB\\GeekBrains\\Git\\Section6\\HW8\\HW8\\Base.txt");
     if (!file)
     {
@@ -356,23 +341,8 @@ int main()
     print_phone_number("Asdqs");
     std::cout << std::endl;
 
-
-
     std::cout << "----ChangePhoneNumber----" << std::endl;
     book1.ChangePhoneNumber(Person{ "Varennikov", "Vladimir", "Vladimirovitch" }, Nomber{ 16, 465, 9155448, 13 });
     book1.ChangePhoneNumber(Person{ "Mironova", "Margarita", "Vladimirovna" }, Nomber{ 16, 465, 9155448, 13 });
     book1.PrintBook();
-    
-
-    /*
-    std::string PersonPhone1[5][7];
-    for (int j = 0; j < 5; j++)
-    {
-        for (int i = 0; i <= 6; i++)
-        {
-            file >> PersonPhone1[j][i];
-        }
-        std::cout << PersonPhone1[j][0] << " " << PersonPhone1[j][1] << " " << PersonPhone1[j][2] << " +" << PersonPhone1[j][3] << "(" << PersonPhone1[j][4] << ")" << PersonPhone1[j][5] << " dob." << PersonPhone1[j][6] << std::endl;
-    }
-    */
 }
