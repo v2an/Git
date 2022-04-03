@@ -70,3 +70,20 @@ void MainWindow::on_CalculateButton_clicked()
 
 }
 
+
+void MainWindow::on_CSideCalculate_clicked()
+{
+    qreal AValue = ui->ASideValue->text().toDouble();
+    qreal BValue = ui->BSideValue->text().toDouble();
+    float AngleValue = ui->AngleValue->text().toFloat();
+    qreal CValue = 0.00;
+    qreal cosinus;
+    if (ui->CheckDegrees->isChecked()) {
+        cosinus = qCos(qDegreesToRadians(AngleValue));
+    }
+    else {
+            cosinus = qCos(AngleValue);
+    }
+    CValue = qSqrt((AValue * AValue) + (BValue * BValue) - (2 * AValue * BValue * cosinus));
+    ui->CSideValue->setText(QString::number(CValue));
+}

@@ -18,6 +18,8 @@ public:
 private slots:
     void on_CalculateButton_clicked();
 
+    void on_CSideCalculate_clicked();
+
 private:
     Ui::MainWindow *ui;
 };

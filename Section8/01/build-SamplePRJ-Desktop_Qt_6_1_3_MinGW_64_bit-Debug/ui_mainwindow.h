@@ -16,6 +16,7 @@
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPushButton>
+#include <QtWidgets/QRadioButton>
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QWidget>
 
@@ -37,6 +38,19 @@ public:
     QLabel *Answ1Display;
     QLabel *Answ2Display;
     QLabel *label;
+    QLabel *MainLable_2;
+    QLabel *ASide;
+    QLabel *BSide;
+    QLabel *Andgle;
+    QLineEdit *ASideValue;
+    QLineEdit *BSideValue;
+    QLineEdit *AngleValue;
+    QPushButton *CSideCalculate;
+    QLabel *RandomTXT;
+    QLabel *CSideValue;
+    QRadioButton *CheckDegrees;
+    QRadioButton *CheckRadians;
+    QLabel *RandomTXT_2;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -44,7 +58,7 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
-        MainWindow->resize(747, 166);
+        MainWindow->resize(747, 335);
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         CalculateButton = new QPushButton(centralwidget);
@@ -83,6 +97,45 @@ public:
         label = new QLabel(centralwidget);
         label->setObjectName(QString::fromUtf8("label"));
         label->setGeometry(QRect(540, 20, 71, 16));
+        MainLable_2 = new QLabel(centralwidget);
+        MainLable_2->setObjectName(QString::fromUtf8("MainLable_2"));
+        MainLable_2->setGeometry(QRect(0, 140, 301, 16));
+        ASide = new QLabel(centralwidget);
+        ASide->setObjectName(QString::fromUtf8("ASide"));
+        ASide->setGeometry(QRect(30, 180, 21, 16));
+        BSide = new QLabel(centralwidget);
+        BSide->setObjectName(QString::fromUtf8("BSide"));
+        BSide->setGeometry(QRect(30, 220, 21, 16));
+        Andgle = new QLabel(centralwidget);
+        Andgle->setObjectName(QString::fromUtf8("Andgle"));
+        Andgle->setGeometry(QRect(30, 260, 21, 16));
+        ASideValue = new QLineEdit(centralwidget);
+        ASideValue->setObjectName(QString::fromUtf8("ASideValue"));
+        ASideValue->setGeometry(QRect(50, 170, 113, 31));
+        BSideValue = new QLineEdit(centralwidget);
+        BSideValue->setObjectName(QString::fromUtf8("BSideValue"));
+        BSideValue->setGeometry(QRect(50, 210, 113, 31));
+        AngleValue = new QLineEdit(centralwidget);
+        AngleValue->setObjectName(QString::fromUtf8("AngleValue"));
+        AngleValue->setGeometry(QRect(50, 250, 113, 31));
+        CSideCalculate = new QPushButton(centralwidget);
+        CSideCalculate->setObjectName(QString::fromUtf8("CSideCalculate"));
+        CSideCalculate->setGeometry(QRect(300, 170, 80, 111));
+        RandomTXT = new QLabel(centralwidget);
+        RandomTXT->setObjectName(QString::fromUtf8("RandomTXT"));
+        RandomTXT->setGeometry(QRect(420, 180, 71, 16));
+        CSideValue = new QLabel(centralwidget);
+        CSideValue->setObjectName(QString::fromUtf8("CSideValue"));
+        CSideValue->setGeometry(QRect(420, 210, 171, 16));
+        CheckDegrees = new QRadioButton(centralwidget);
+        CheckDegrees->setObjectName(QString::fromUtf8("CheckDegrees"));
+        CheckDegrees->setGeometry(QRect(190, 240, 69, 19));
+        CheckRadians = new QRadioButton(centralwidget);
+        CheckRadians->setObjectName(QString::fromUtf8("CheckRadians"));
+        CheckRadians->setGeometry(QRect(190, 260, 70, 19));
+        RandomTXT_2 = new QLabel(centralwidget);
+        RandomTXT_2->setObjectName(QString::fromUtf8("RandomTXT_2"));
+        RandomTXT_2->setGeometry(QRect(190, 220, 71, 16));
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
@@ -109,6 +162,16 @@ public:
         Answ1Display->setText(QString());
         Answ2Display->setText(QString());
         label->setText(QCoreApplication::translate("MainWindow", "\320\240\320\265\320\267\321\203\320\273\321\214\321\202\320\260\321\202:", nullptr));
+        MainLable_2->setText(QCoreApplication::translate("MainWindow", "\320\222\320\262\320\265\320\264\320\270\321\202\320\265 \320\264\320\262\320\265 \321\201\321\202\320\276\321\200\320\276\320\275\321\213 \321\202\321\200\320\265\321\203\320\263\320\276\320\273\321\214\320\275\320\270\320\272\320\260 \320\270 \321\203\320\263\320\276\320\273 \320\274\320\265\320\266\320\264\321\203 \320\275\320\270\320\274\320\270:", nullptr));
+        ASide->setText(QCoreApplication::translate("MainWindow", "A:", nullptr));
+        BSide->setText(QCoreApplication::translate("MainWindow", "B:", nullptr));
+        Andgle->setText(QCoreApplication::translate("MainWindow", "<html><head/><body><p><span style=\" font-family:'arial','sans-serif'; font-size:14px; color:#000000; background-color:#ffffff;\">\316\261</span>:</p></body></html>", nullptr));
+        CSideCalculate->setText(QCoreApplication::translate("MainWindow", "\320\240\320\260\321\201\321\201\321\207\320\270\321\202\320\260\321\202\321\214", nullptr));
+        RandomTXT->setText(QCoreApplication::translate("MainWindow", "\320\240\320\265\320\267\321\203\320\273\321\214\321\202\320\260\321\202:", nullptr));
+        CSideValue->setText(QString());
+        CheckDegrees->setText(QCoreApplication::translate("MainWindow", "\320\223\321\200\320\260\320\264\321\203\321\201\321\213", nullptr));
+        CheckRadians->setText(QCoreApplication::translate("MainWindow", "\320\240\320\260\320\264\320\270\320\260\320\275\321\213", nullptr));
+        RandomTXT_2->setText(QCoreApplication::translate("MainWindow", "\320\243\320\263\320\276\320\273 \320\262 \321\200\320\260\320\264\320\270\320\260\320\275\320\260\321\205!", nullptr));
     } // retranslateUi
 
 };
