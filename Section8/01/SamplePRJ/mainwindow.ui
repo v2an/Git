@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>747</width>
-    <height>335</height>
+    <height>524</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -99,7 +99,7 @@
    <widget class="QLabel" name="MainLable">
     <property name="geometry">
      <rect>
-      <x>0</x>
+      <x>10</x>
       <y>10</y>
       <width>221</width>
       <height>16</height>
@@ -164,7 +164,7 @@
    <widget class="QLabel" name="MainLable_2">
     <property name="geometry">
      <rect>
-      <x>0</x>
+      <x>10</x>
       <y>140</y>
       <width>301</width>
       <height>16</height>
@@ -319,6 +319,91 @@
     </property>
     <property name="text">
      <string>Угол в радианах!</string>
+    </property>
+   </widget>
+   <widget class="QPlainTextEdit" name="InputWindow">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>330</y>
+      <width>261</width>
+      <height>151</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="OutputWindow">
+    <property name="geometry">
+     <rect>
+      <x>460</x>
+      <y>330</y>
+      <width>261</width>
+      <height>151</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="AddButton">
+    <property name="geometry">
+     <rect>
+      <x>300</x>
+      <y>330</y>
+      <width>141</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Добавить</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="OverrideButton">
+    <property name="geometry">
+     <rect>
+      <x>300</x>
+      <y>380</y>
+      <width>141</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Заменить</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="EditAddButton">
+    <property name="geometry">
+     <rect>
+      <x>300</x>
+      <y>430</y>
+      <width>141</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&quot;Рандомный&quot; текст</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="RandomTXT_3">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>310</y>
+      <width>71</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Ввод</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="RandomTXT_4">
+    <property name="geometry">
+     <rect>
+      <x>570</x>
+      <y>310</y>
+      <width>71</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Нечто</string>
     </property>
    </widget>
   </widget>

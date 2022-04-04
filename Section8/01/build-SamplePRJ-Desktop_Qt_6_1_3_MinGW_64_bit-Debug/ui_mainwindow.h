@@ -15,9 +15,11 @@
 #include <QtWidgets/QLineEdit>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenuBar>
+#include <QtWidgets/QPlainTextEdit>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QRadioButton>
 #include <QtWidgets/QStatusBar>
+#include <QtWidgets/QTextEdit>
 #include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -51,6 +53,13 @@ public:
     QRadioButton *CheckDegrees;
     QRadioButton *CheckRadians;
     QLabel *RandomTXT_2;
+    QPlainTextEdit *InputWindow;
+    QTextEdit *OutputWindow;
+    QPushButton *AddButton;
+    QPushButton *OverrideButton;
+    QPushButton *EditAddButton;
+    QLabel *RandomTXT_3;
+    QLabel *RandomTXT_4;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -58,7 +67,7 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
-        MainWindow->resize(747, 335);
+        MainWindow->resize(747, 524);
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         CalculateButton = new QPushButton(centralwidget);
@@ -84,7 +93,7 @@ public:
         Clabel->setGeometry(QRect(240, 100, 21, 16));
         MainLable = new QLabel(centralwidget);
         MainLable->setObjectName(QString::fromUtf8("MainLable"));
-        MainLable->setGeometry(QRect(0, 10, 221, 16));
+        MainLable->setGeometry(QRect(10, 10, 221, 16));
         SituationDisplay = new QLabel(centralwidget);
         SituationDisplay->setObjectName(QString::fromUtf8("SituationDisplay"));
         SituationDisplay->setGeometry(QRect(550, 50, 171, 16));
@@ -99,7 +108,7 @@ public:
         label->setGeometry(QRect(540, 20, 71, 16));
         MainLable_2 = new QLabel(centralwidget);
         MainLable_2->setObjectName(QString::fromUtf8("MainLable_2"));
-        MainLable_2->setGeometry(QRect(0, 140, 301, 16));
+        MainLable_2->setGeometry(QRect(10, 140, 301, 16));
         ASide = new QLabel(centralwidget);
         ASide->setObjectName(QString::fromUtf8("ASide"));
         ASide->setGeometry(QRect(30, 180, 21, 16));
@@ -136,6 +145,27 @@ public:
         RandomTXT_2 = new QLabel(centralwidget);
         RandomTXT_2->setObjectName(QString::fromUtf8("RandomTXT_2"));
         RandomTXT_2->setGeometry(QRect(190, 220, 71, 16));
+        InputWindow = new QPlainTextEdit(centralwidget);
+        InputWindow->setObjectName(QString::fromUtf8("InputWindow"));
+        InputWindow->setGeometry(QRect(20, 330, 261, 151));
+        OutputWindow = new QTextEdit(centralwidget);
+        OutputWindow->setObjectName(QString::fromUtf8("OutputWindow"));
+        OutputWindow->setGeometry(QRect(460, 330, 261, 151));
+        AddButton = new QPushButton(centralwidget);
+        AddButton->setObjectName(QString::fromUtf8("AddButton"));
+        AddButton->setGeometry(QRect(300, 330, 141, 41));
+        OverrideButton = new QPushButton(centralwidget);
+        OverrideButton->setObjectName(QString::fromUtf8("OverrideButton"));
+        OverrideButton->setGeometry(QRect(300, 380, 141, 41));
+        EditAddButton = new QPushButton(centralwidget);
+        EditAddButton->setObjectName(QString::fromUtf8("EditAddButton"));
+        EditAddButton->setGeometry(QRect(300, 430, 141, 41));
+        RandomTXT_3 = new QLabel(centralwidget);
+        RandomTXT_3->setObjectName(QString::fromUtf8("RandomTXT_3"));
+        RandomTXT_3->setGeometry(QRect(130, 310, 71, 16));
+        RandomTXT_4 = new QLabel(centralwidget);
+        RandomTXT_4->setObjectName(QString::fromUtf8("RandomTXT_4"));
+        RandomTXT_4->setGeometry(QRect(570, 310, 71, 16));
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
@@ -172,6 +202,11 @@ public:
         CheckDegrees->setText(QCoreApplication::translate("MainWindow", "\320\223\321\200\320\260\320\264\321\203\321\201\321\213", nullptr));
         CheckRadians->setText(QCoreApplication::translate("MainWindow", "\320\240\320\260\320\264\320\270\320\260\320\275\321\213", nullptr));
         RandomTXT_2->setText(QCoreApplication::translate("MainWindow", "\320\243\320\263\320\276\320\273 \320\262 \321\200\320\260\320\264\320\270\320\260\320\275\320\260\321\205!", nullptr));
+        AddButton->setText(QCoreApplication::translate("MainWindow", "\320\224\320\276\320\261\320\260\320\262\320\270\321\202\321\214", nullptr));
+        OverrideButton->setText(QCoreApplication::translate("MainWindow", "\320\227\320\260\320\274\320\265\320\275\320\270\321\202\321\214", nullptr));
+        EditAddButton->setText(QCoreApplication::translate("MainWindow", "\"\320\240\320\260\320\275\320\264\320\276\320\274\320\275\321\213\320\271\" \321\202\320\265\320\272\321\201\321\202", nullptr));
+        RandomTXT_3->setText(QCoreApplication::translate("MainWindow", "\320\222\320\262\320\276\320\264", nullptr));
+        RandomTXT_4->setText(QCoreApplication::translate("MainWindow", "\320\235\320\265\321\207\321\202\320\276", nullptr));
     } // retranslateUi
 
 };

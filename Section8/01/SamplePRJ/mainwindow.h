@@ -20,6 +20,12 @@ private slots:
 
     void on_CSideCalculate_clicked();
 
+    void on_AddButton_clicked();
+
+    void on_OverrideButton_clicked();
+
+    void on_EditAddButton_clicked();
+
 private:
     Ui::MainWindow *ui;
 };

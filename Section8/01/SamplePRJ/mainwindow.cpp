@@ -87,3 +87,25 @@ void MainWindow::on_CSideCalculate_clicked()
     CValue = qSqrt((AValue * AValue) + (BValue * BValue) - (2 * AValue * BValue * cosinus));
     ui->CSideValue->setText(QString::number(CValue));
 }
+
+void MainWindow::on_AddButton_clicked()
+{
+    QString input = ui->InputWindow->toPlainText();
+    QString newtext = ui->OutputWindow->toPlainText();
+    newtext = newtext + input;
+    ui->OutputWindow->setPlainText(newtext);
+}
+
+void MainWindow::on_OverrideButton_clicked()
+{
+    QString input = ui->InputWindow->toPlainText();
+    ui->OutputWindow->setPlainText(input);
+}
+
+
+void MainWindow::on_EditAddButton_clicked()
+{
+    QString input = "<font colot='blue'>Chebureki <b>rulyat</b>!</font>";
+    ui->OutputWindow->setHtml(input);
+}
+
