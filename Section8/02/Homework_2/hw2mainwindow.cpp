@@ -19,8 +19,6 @@ HW2MainWindow::HW2MainWindow(QWidget *parent)
     model.appendRow(new QStandardItem(QIcon{":/py.svg"}, "Python"));
     model.appendRow(new QStandardItem(QIcon{":/c++.png"}, "C++"));
     model.appendRow(new QStandardItem(QIcon{":/csh.png"}, "C#"));
-
-    setWindowTitle("Lang list");
 }
 
 HW2MainWindow::~HW2MainWindow()
