@@ -1,0 +1,9 @@
+<RCC>
+    <qresource prefix="/">
+        <file>Spravka</file>
+        <file>../resources/bg.jpg</file>
+        <file>HW4_en.qm</file>
+        <file>HW4_ru.qm</file>
+        <file>SpravkaEn</file>
+    </qresource>
+</RCC>

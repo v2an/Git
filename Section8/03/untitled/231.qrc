@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/">
+        <file>../../../../../../Files/BG2.png</file>
+        <file>Spravka</file>
+    </qresource>
+</RCC>
