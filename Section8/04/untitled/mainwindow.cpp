@@ -24,18 +24,19 @@ MainWindow::MainWindow(QWidget *parent)
     ui->TrText->setText(tr("Language:"));
     ui->TrEng->setText(tr("Eng"));
     ui->TrRus->setText(tr("Rus"));
+
+    setwidg = new SettWindget(this);
+    connect(ui->Setts, SIGNAL(clicked()), setwidg, SLOT(show()));
+    connect(ui->Setts, SIGNAL(clicked()), this, SLOT(onButtonSend()));
+    connect(this, SIGNAL(SendData(QList<QKeySequence>&,Qt::KeyboardModifier&,int)), setwidg, SLOT(ReciveData(QList<QKeySequence>&,Qt::KeyboardModifier&,int)));
 }
 
-struct HotKeys
-{
-    Qt::KeyboardModifier mod = Qt::ShiftModifier;
-    Qt::Key open = Qt::Key_O;
-    Qt::Key save = Qt::Key_S;
-    Qt::Key exit = Qt::Key_Q;
-    Qt::Key newdoc = Qt::Key_N;
-};
+QList<QKeySequence> KeyBinds = { Qt::Key_O, Qt::Key_S, Qt::Key_Q, Qt::Key_N };
+Qt::KeyboardModifier ModifierBind = Qt::ShiftModifier;
+int Language = 1; //1 - Ru, 2 - En
 
-HotKeys SetUPS = {Qt::ShiftModifier, Qt::Key_O, Qt::Key_S, Qt::Key_Q, Qt::Key_N};
+//QString str = "Ololololo";  < test message xP
+
 
 MainWindow::~MainWindow()
 {
@@ -86,6 +87,8 @@ void MainWindow::Open()
 void MainWindow::About()
 {
     dialog = new Dialog(this);
+    emit SendLang(Language);
+    connect(this, SIGNAL(SendLang(int)), dialog, SLOT(ReciveLang(int)));
     dialog->show();
 }
 
@@ -128,6 +131,7 @@ void MainWindow::on_TrEng_clicked()
     transl.load(":/HW4_en");
     qApp->installTranslator(&transl);
     ui->retranslateUi(this);
+    Language = 2;
 }
 
 
@@ -136,34 +140,47 @@ void MainWindow::on_TrRus_clicked()
     transl.load(":/HW4_ru");
     qApp->installTranslator(&transl);
     ui->retranslateUi(this);
+    Language = 1;
 }
 
 // ============================================================================================================================== Events
 
 void MainWindow::keyReleaseEvent(QKeyEvent *event)
 {
-    if (event->key() == SetUPS.open && event->modifiers() == SetUPS.mod)
+    if (QKeySequence(event->key()) == KeyBinds[0] && event->modifiers() == ModifierBind)
     {
         Open();
     }
-    else if (event->key() == SetUPS.save && event->modifiers() == SetUPS.mod)
+    else if (QKeySequence(event->key()) == KeyBinds[1] && event->modifiers() == ModifierBind)
     {
         Save();
     }
-    else if (event->key() == SetUPS.exit && event->modifiers() == SetUPS.mod)
+    else if (QKeySequence(event->key()) == KeyBinds[2] && event->modifiers() == ModifierBind)
     {
         Exit();
     }
-    else if (event->key() == SetUPS.newdoc && event->modifiers() == SetUPS.mod)
+    else if (QKeySequence(event->key()) == KeyBinds[3] && event->modifiers() == ModifierBind)
     {
         New();
     }
 }
 
+void MainWindow::onButtonSend()
+{
+    emit SendData(KeyBinds, ModifierBind, Language);
+}
 
+void MainWindow::ReciveBack(QList<QKeySequence> &RKeyBinds, Qt::KeyboardModifier &RModifierBind)
+{
+    KeyBinds = RKeyBinds;
+    ModifierBind = RModifierBind;
+}
+
+/*
 void MainWindow::on_Setts_clicked()
 {
     setwidg = new SettWindget(this);
+    connect(this, SIGNAL(SendData(KeyBinds,ModifierBind)), setwidg, SLOT(ReciveData(QList<Qt::Key>,Qt::KeyboardModifier)));
     setwidg->show();
 }
-
+*/

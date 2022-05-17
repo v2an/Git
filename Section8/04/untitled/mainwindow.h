@@ -6,6 +6,19 @@
 #include "settwindget.h"
 #include <QTranslator>
 
+/*
+struct HotKeys
+{
+    Qt::KeyboardModifier mod = Qt::ShiftModifier;
+    Qt::Key open = Qt::Key_O;
+    Qt::Key save = Qt::Key_S;
+    Qt::Key exit = Qt::Key_Q;
+    Qt::Key newdoc = Qt::Key_N;
+};
+
+Q_DECLARE_METATYPE(HotKeys);
+*/
+
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
 QT_END_NAMESPACE
@@ -35,9 +48,9 @@ private slots:
 
     void keyReleaseEvent(QKeyEvent *event) override;
 
-    void on_SettButton_clicked();
+    //void on_Setts_clicked();
 
-    void on_Setts_clicked();
+    void onButtonSend();
 
 private:
     Ui::MainWindow *ui;
@@ -51,6 +64,11 @@ private:
     void About();
 
 signals:
+    void SendData(QList<QKeySequence> &KeyBinds, Qt::KeyboardModifier &ModifierBind, int lang);
+    void SendLang(int lang);
+
+public slots:
+    void ReciveBack(QList<QKeySequence> &RKeyBinds, Qt::KeyboardModifier &RModifierBind);
 
 };
 #endif // MAINWINDOW_H

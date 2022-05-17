@@ -16,8 +16,12 @@ public:
     explicit Dialog(QWidget *parent = nullptr);
     ~Dialog();
 
+public slots:
+    void ReciveLang(int Lang);
+
 private:
     Ui::Dialog *ui;
+    QTranslator transl;
 };
 
 #endif // DIALOG_H
