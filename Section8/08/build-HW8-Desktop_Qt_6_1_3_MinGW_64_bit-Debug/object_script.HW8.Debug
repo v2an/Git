@@ -1,0 +1,14 @@
+debug/dialog.o
+debug/finder.o
+debug/findercontroller.o
+debug/foldervewer.o
+debug/main.o
+debug/mainwindow.o
+debug/settwindget.o
+debug/qrc_231.o
+debug/moc_dialog.o
+debug/moc_finder.o
+debug/moc_findercontroller.o
+debug/moc_foldervewer.o
+debug/moc_mainwindow.o
+debug/moc_settwindget.o

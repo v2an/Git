@@ -1,0 +1,14 @@
+release/dialog.o
+release/finder.o
+release/findercontroller.o
+release/foldervewer.o
+release/main.o
+release/mainwindow.o
+release/settwindget.o
+release/qrc_231.o
+release/moc_dialog.o
+release/moc_finder.o
+release/moc_findercontroller.o
+release/moc_foldervewer.o
+release/moc_mainwindow.o
+release/moc_settwindget.o
