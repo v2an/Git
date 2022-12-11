@@ -8,6 +8,7 @@
 
 #include <memory>
 #include "../../untitled/mainwindow.h"
+#include <QtGui/qtextcursor.h>
 #include <QtCore/qbytearray.h>
 #include <QtCore/qmetatype.h>
 #include <QtCore/QList>
@@ -23,8 +24,8 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_MainWindow_t {
-    const uint offsetsAndSize[62];
-    char stringdata0[304];
+    const uint offsetsAndSize[66];
+    char stringdata0[327];
 };
 #define QT_MOC_LITERAL(ofs, len) \
     uint(offsetof(qt_meta_stringdata_MainWindow_t, stringdata0) + ofs), len 
@@ -58,9 +59,11 @@ QT_MOC_LITERAL(227, 11), // "ChangeLight"
 QT_MOC_LITERAL(239, 8), // "RuTransl"
 QT_MOC_LITERAL(248, 8), // "EnTransl"
 QT_MOC_LITERAL(257, 11), // "PrintDialog"
-QT_MOC_LITERAL(269, 10), // "ReciveBack"
-QT_MOC_LITERAL(280, 9), // "RKeyBinds"
-QT_MOC_LITERAL(290, 13) // "RModifierBind"
+QT_MOC_LITERAL(269, 10), // "CopyFormat"
+QT_MOC_LITERAL(280, 11), // "PasteFormat"
+QT_MOC_LITERAL(292, 10), // "ReciveBack"
+QT_MOC_LITERAL(303, 9), // "RKeyBinds"
+QT_MOC_LITERAL(313, 13) // "RModifierBind"
 
     },
     "MainWindow\0SendData\0\0QList<QKeySequence>&\0"
@@ -70,8 +73,9 @@ QT_MOC_LITERAL(290, 13) // "RModifierBind"
     "QKeyEvent*\0event\0onButtonSend\0New\0"
     "Open\0ROOpen\0Exit\0Save\0About\0FolderOpen\0"
     "ChangeDark\0ChangeLight\0RuTransl\0"
-    "EnTransl\0PrintDialog\0ReciveBack\0"
-    "RKeyBinds\0RModifierBind"
+    "EnTransl\0PrintDialog\0CopyFormat\0"
+    "PasteFormat\0ReciveBack\0RKeyBinds\0"
+    "RModifierBind"
 };
 #undef QT_MOC_LITERAL
 
@@ -81,7 +85,7 @@ static const uint qt_meta_data_MainWindow[] = {
        9,       // revision
        0,       // classname
        0,    0, // classinfo
-      18,   14, // methods
+      20,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -89,26 +93,28 @@ static const uint qt_meta_data_MainWindow[] = {
        3,       // signalCount
 
  // signals: name, argc, parameters, tag, flags, initial metatype offsets
-       1,    3,  122,    2, 0x06,    0 /* Public */,
-       8,    1,  129,    2, 0x06,    4 /* Public */,
-       9,    1,  132,    2, 0x06,    6 /* Public */,
+       1,    3,  134,    2, 0x06,    0 /* Public */,
+       8,    1,  141,    2, 0x06,    4 /* Public */,
+       9,    1,  144,    2, 0x06,    6 /* Public */,
 
  // slots: name, argc, parameters, tag, flags, initial metatype offsets
-      12,    1,  135,    2, 0x08,    8 /* Private */,
-      15,    0,  138,    2, 0x08,   10 /* Private */,
-      16,    0,  139,    2, 0x08,   11 /* Private */,
-      17,    0,  140,    2, 0x08,   12 /* Private */,
-      18,    0,  141,    2, 0x08,   13 /* Private */,
-      19,    0,  142,    2, 0x08,   14 /* Private */,
-      20,    0,  143,    2, 0x08,   15 /* Private */,
-      21,    0,  144,    2, 0x08,   16 /* Private */,
-      22,    0,  145,    2, 0x08,   17 /* Private */,
-      23,    0,  146,    2, 0x08,   18 /* Private */,
-      24,    0,  147,    2, 0x08,   19 /* Private */,
-      25,    0,  148,    2, 0x08,   20 /* Private */,
-      26,    0,  149,    2, 0x08,   21 /* Private */,
-      27,    0,  150,    2, 0x08,   22 /* Private */,
-      28,    2,  151,    2, 0x0a,   23 /* Public */,
+      12,    1,  147,    2, 0x08,    8 /* Private */,
+      15,    0,  150,    2, 0x08,   10 /* Private */,
+      16,    0,  151,    2, 0x08,   11 /* Private */,
+      17,    0,  152,    2, 0x08,   12 /* Private */,
+      18,    0,  153,    2, 0x08,   13 /* Private */,
+      19,    0,  154,    2, 0x08,   14 /* Private */,
+      20,    0,  155,    2, 0x08,   15 /* Private */,
+      21,    0,  156,    2, 0x08,   16 /* Private */,
+      22,    0,  157,    2, 0x08,   17 /* Private */,
+      23,    0,  158,    2, 0x08,   18 /* Private */,
+      24,    0,  159,    2, 0x08,   19 /* Private */,
+      25,    0,  160,    2, 0x08,   20 /* Private */,
+      26,    0,  161,    2, 0x08,   21 /* Private */,
+      27,    0,  162,    2, 0x08,   22 /* Private */,
+      28,    0,  163,    2, 0x08,   23 /* Private */,
+      29,    0,  164,    2, 0x08,   24 /* Private */,
+      30,    2,  165,    2, 0x0a,   25 /* Public */,
 
  // signals: parameters
     QMetaType::Void, 0x80000000 | 3, 0x80000000 | 5, QMetaType::Int,    4,    6,    7,
@@ -130,7 +136,9 @@ static const uint qt_meta_data_MainWindow[] = {
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
-    QMetaType::Void, 0x80000000 | 3, 0x80000000 | 5,   29,   30,
+    QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void, 0x80000000 | 3, 0x80000000 | 5,   31,   32,
 
        0        // eod
 };
@@ -158,7 +166,9 @@ void MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         case 14: _t->RuTransl(); break;
         case 15: _t->EnTransl(); break;
         case 16: _t->PrintDialog(); break;
-        case 17: _t->ReciveBack((*reinterpret_cast< QList<QKeySequence>(*)>(_a[1])),(*reinterpret_cast< Qt::KeyboardModifier(*)>(_a[2]))); break;
+        case 17: _t->CopyFormat(); break;
+        case 18: _t->PasteFormat(); break;
+        case 19: _t->ReciveBack((*reinterpret_cast< QList<QKeySequence>(*)>(_a[1])),(*reinterpret_cast< Qt::KeyboardModifier(*)>(_a[2]))); break;
         default: ;
         }
     } else if (_c == QMetaObject::IndexOfMethod) {
@@ -195,7 +205,7 @@ const QMetaObject MainWindow::staticMetaObject = { {
     nullptr,
 qt_incomplete_metaTypeArray<qt_meta_stringdata_MainWindow_t
 , QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<QList<QKeySequence> &, std::false_type>, QtPrivate::TypeAndForceComplete<Qt::KeyboardModifier &, std::false_type>, QtPrivate::TypeAndForceComplete<int, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<int, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<QString &, std::false_type>
-, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<QKeyEvent *, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<QList<QKeySequence> &, std::false_type>, QtPrivate::TypeAndForceComplete<Qt::KeyboardModifier &, std::false_type>
+, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<QKeyEvent *, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<QList<QKeySequence> &, std::false_type>, QtPrivate::TypeAndForceComplete<Qt::KeyboardModifier &, std::false_type>
 
 
 >,
@@ -222,13 +232,13 @@ int MainWindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 18)
+        if (_id < 20)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 18;
+        _id -= 20;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 18)
+        if (_id < 20)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 18;
+        _id -= 20;
     }
     return _id;
 }
